@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>SmokeGuard | שומרים על החיים</title>
+  <meta name="description" content="SmokeGuard — אתר חיזוק רפואי והלכתי להפסקת עישון, הגנה על המשפחה, ותוכנית מעשית ליציאה לחירות." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SmokeGuard | שומרים על החיים" />
+  <meta property="og:description" content="חיזוק רפואי + הלכתי + תוכנית גמילה מעשית. מתחילים היום." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">דלג לתוכן</a>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__mark" aria-hidden="true">🛡️</div>
+        <div class="brand__text">
+          <div class="brand__name">SmokeGuard</div>
+          <div class="brand__tag">שומרים על החיים • שומרים על הבית</div>
+        </div>
+      </div>
+
+      <button class="navbtn" aria-label="פתח תפריט" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a class="nav__link active" href="./index.html">בית</a>
+        <a class="nav__link" href="./pages/medical.html">רפואה</a>
+        <a class="nav__link" href="./pages/halacha.html">הלכה</a>
+        <a class="nav__link" href="./pages/quit-plan.html">תוכנית גמילה</a>
+        <a class="nav__link" href="./pages/community.html">קהילה</a>
+        <a class="nav__link" href="./pages/cards.html">קלפי פיתוח</a>
+        <a class="nav__link" href="./pages/about.html">אודות</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="pill">🚭 יציאה לחירות • 💙 שמירה על הנשמה והגוף</div>
+          <h1>העישון הוא לא “הרגל” — זה <span class="grad">סיכון חיים</span>.</h1>
+          <p class="lead">
+            כאן מקבלים חיזוק ברור: מה קורה לגוף, מה קורה לבית (עישון פסיבי),
+            ומהי הדרך המעשית לעצור — עם מסגרת הלכתית ומסלול יומי.
+          </p>
+
+          <div class="cta">
+            <a class="btn btn--primary" href="./pages/quit-plan.html">🚀 מתחילים תוכנית גמילה</a>
+            <a class="btn btn--ghost" href="./pages/medical.html">🩺 להבין את הנזק</a>
+          </div>
+
+          <div class="mini">
+            <div class="mini__card">
+              <div class="mini__title">🛡️ מטרה</div>
+              <div class="mini__text">להגן על החיים — שלך ושל מי שסביבך.</div>
+            </div>
+            <div class="mini__card">
+              <div class="mini__title">⚖️ הלכה למעשה</div>
+              <div class="mini__text">“ונשמרתם מאוד לנפשותיכם” → החלטה מעשית.</div>
+            </div>
+            <div class="mini__card">
+              <div class="mini__title">📈 מסלול</div>
+              <div class="mini__text">יום-יום: פעולה קטנה שמנצחת התמכרות גדולה.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__panel">
+          <div class="panel">
+            <div class="panel__top">
+              <div class="panel__title">🎯 דופק החלטה</div>
+              <div class="panel__hint">סמן התחייבות, וקבל מד-התקדמות יומי.</div>
+            </div>
+
+            <div class="panel__body">
+              <div class="switch">
+                <input id="pledge" type="checkbox" />
+                <label for="pledge">
+                  ✅ אני מתחייב/ת: לא מעשן/ת היום — שומר/ת על הנשמה והגוף
+                </label>
+              </div>
+
+              <div class="meter">
+                <div class="meter__row">
+                  <span>📅 רצף נקי</span>
+                  <strong id="streak">0</strong>
+                </div>
+                <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0">
+                  <div class="bar__fill" id="barFill"></div>
+                </div>
+                <div class="meter__sub">יעד ראשון: 30 יום (בונים יסוד חדש) 🔥</div>
+              </div>
+
+              <div class="panel__actions">
+                <button class="btn btn--soft" id="btnDayDone">🌟 עברתי יום נקי</button>
+                <button class="btn btn--danger" id="btnReset">🧯 איפוס (בלי אשמה — ממשיכים)</button>
+              </div>
+
+              <div class="notice">
+                <strong>💡 טיפ מהיר:</strong>
+                כשעולה חשק — 10 נשימות, כוס מים, והחלפה לפעולה (הליכה 3 דקות).
+              </div>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat__k">🫁</div>
+              <div class="stat__t">רווח גופני</div>
+              <div class="stat__d">נשימה, סיבולת, אנרגיה</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">👨‍👩‍👧‍👦</div>
+              <div class="stat__t">רווח לבית</div>
+              <div class="stat__d">הפחתת עישון פסיבי</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">🕯️</div>
+              <div class="stat__t">רווח רוחני</div>
+              <div class="stat__d">כבוד לחיים ומתנת הבורא</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>🧭 מסלול האתר — בקצרה</h2>
+          <p>נכנסים לפי הסדר, ומתקדמים צעד-צעד.</p>
+        </div>
+
+        <div class="grid3">
+          <a class="card" href="./pages/medical.html">
+            <div class="card__icon">🩺</div>
+            <div class="card__title">רפואה</div>
+            <div class="card__text">מה העישון עושה לגוף ולעישון פסיבי — בשפה ברורה.</div>
+            <div class="card__go">לקריאה →</div>
+          </a>
+
+          <a class="card" href="./pages/halacha.html">
+            <div class="card__icon">⚖️</div>
+            <div class="card__title">הלכה</div>
+            <div class="card__text">שמירת החיים, אחריות חברתית, והכרעה למעשה.</div>
+            <div class="card__go">לקריאה →</div>
+          </a>
+
+          <a class="card" href="./pages/quit-plan.html">
+            <div class="card__icon">🚀</div>
+            <div class="card__title">תוכנית גמילה</div>
+            <div class="card__text">שגרה יומית + כלים לניהול חשקים + תחליפים מעשיים.</div>
+            <div class="card__go">להתחיל →</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container split">
+        <div>
+          <h3>🧠 “התמכרות” = מנגנון</h3>
+          <p>
+            לא נלחמים באופי — נלחמים במערכת: טריגרים, הרגלים, תחליפים, חיזוק.
+            כשבונים מסלול ברור, היצר מאבד את הכוח.
+          </p>
+          <ul class="bullets">
+            <li>💧 החלפה מיידית: מים / מסטיק / נשימות</li>
+            <li>🚶 תנועה קצרה שוברת חשק</li>
+            <li>🧱 חוק 24 שעות: רק היום</li>
+            <li>🤝 שותף אחריות מחזק התמדה</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <div class="callout__title">🎁 “רווח מול הפסד”</div>
+          <div class="callout__text">
+            כל יום נקי הוא חיסכון בכסף, שקט בבית, וחוזק פנימי.
+            תן לעצמך הוכחה אחת ביום — ואז עוד אחת.
+          </div>
+          <a class="btn btn--primary" href="./pages/community.html">👥 בונים קהילה תומכת</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>🃏 קלפי פיתוח — חוויית CardGPT</h2>
+          <p>רעיונות מוכנים להעתקה, לבניית קלפי דמות/כלי בהשראת CardGPT.</p>
+        </div>
+        <div class="grid3">
+          <a class="card" href="./pages/cards.html">
+            <div class="card__icon">🧠</div>
+            <div class="card__title">סט קלפים</div>
+            <div class="card__text">JSON נקי עם זהות, לור, כוחות, ומטא — מוכן לפיתוח.</div>
+            <div class="card__go">לרשימה →</div>
+          </a>
+          <a class="card" href="https://anlominus.github.io/CardGPT/" target="_blank" rel="noreferrer">
+            <div class="card__icon">🌐</div>
+            <div class="card__title">CardGPT מקורי</div>
+            <div class="card__text">גלו את ההשראה המקורית והקו העיצובי.</div>
+            <div class="card__go">פתיחה בלשונית חדשה →</div>
+          </a>
+          <a class="card" href="./cards/card-list.md">
+            <div class="card__icon">📄</div>
+            <div class="card__title">קובץ MD להעתקה</div>
+            <div class="card__text">כל הקלפים במרוכז, עם סרגל קוד נקי.</div>
+            <div class="card__go">פתיחת הקובץ →</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="footer__brand">🛡️ SmokeGuard</div>
+        <div class="footer__muted">סטטי • מהיר • מתאים ל-GitHub Pages</div>
+      </div>
+
+      <div class="footer__links">
+        <a href="./pages/medical.html">🩺 רפואה</a>
+        <a href="./pages/halacha.html">⚖️ הלכה</a>
+        <a href="./pages/quit-plan.html">🚀 תוכנית</a>
+        <a href="./pages/about.html">ℹ️ אודות</a>
+      </div>
+
+      <div class="footer__note">
+        <div>📅 עודכן: <span id="updatedAt">—</span></div>
+        <div class="tiny">© SmokeGuard • AnLoMinus</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
