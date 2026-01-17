@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>קלפי תחליפים רפואיים | QuitSmoking Toolkit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Heebo', Arial, sans-serif;
+            background: #fff;
+            margin: 0;
+        }
+
+        header {
+            background: #368cae;
+            color: #fff;
+            text-align: center;
+            padding: 1.6rem 0 1.2rem 0;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            display: grid;
+            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .card {
+            background: linear-gradient(135deg, #e0f2ff 55%, #ffffff 100%);
+            border-radius: 22px;
+            box-shadow: 0 3px 26px #94b7d624;
+            padding: 1.2rem 1.2rem 1.1rem 1.2rem;
+            margin: 0.5rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 370px;
+            border: 2px solid #acf0e2;
+            min-width: 245px;
+        }
+
+        .icon {
+            font-size: 3.2rem;
+            margin-bottom: 0.4em;
+            color: #227091;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            margin: 0 0 0.3em 0;
+            color: #205a7b;
+            letter-spacing: 1.5px;
+        }
+
+        .desc {
+            font-size: 1.05em;
+            color: #315884;
+            margin: 0 0 0.5em 0;
+            min-height: 58px;
+        }
+
+        .adv {
+            color: #1b853f;
+            margin-bottom: 0.2em;
+            font-weight: 700;
+        }
+
+        .how {
+            color: #815f20;
+            font-size: 0.99em;
+        }
+
+        @media (max-width:600px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="AnLoMinus-Cards/styles.css">
+    <style>
+        /* מצב ללא אנימציות: ביטול כל אנימציה/טרנזישן/אפקטים מורכבים */
+        .no-animations * {
+            animation: none !important;
+            transition: none !important;
+        }
+
+        .no-animations .sparkle-layer,
+        .no-animations .border-glow {
+            display: none !important;
+        }
+
+        .no-animations .card:hover {
+            transform: none !important;
+        }
+
+        .toolbar {
+            background: #f4f7fb;
+            border-bottom: 1px solid #dbe3ef;
+            padding: 10px 12px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .toggle-btn {
+            appearance: none;
+            border: 1px solid #9db6cf;
+            background: #e9f1fa;
+            color: #194b6d;
+            padding: 8px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            font: inherit;
+        }
+
+        .toggle-btn[aria-pressed="true"] {
+            background: #194b6d;
+            color: #fff;
+            border-color: #194b6d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toolbar" role="toolbar" aria-label="הגדרות תצוגה">
+        <button id="animToggle" class="toggle-btn" type="button" role="switch" aria-checked="false"
+            aria-pressed="false">
+            אנימציות: כבוי
+        </button>
+    </div>
+    <nav
+        style="background:#e3fff0;padding:1rem 0 1rem 0;text-align:center;font-size:1.05em;margin-bottom:15px;border-bottom:1.5px solid #26b0ad12;">
+        <strong>ניווט מהיר:</strong>&nbsp;
+        <a href="/index.html" style="color:#205a7b;padding:0.31em 0.81em;text-decoration:none;">עמוד ראשי</a> |
+        <a href="/replacements_meds.html" style="color:#368cae;padding:0.31em 0.81em;text-decoration:none;">תחליפים
+            רפואיים</a> |
+        <a href="/replacements_natural.html" style="color:#438c2c;padding:0.31em 0.81em;text-decoration:none;">תחליפים
+            טבעיים</a> |
+        <a href="/replacements_digital.html" style="color:#296c92;padding:0.31em 0.81em;text-decoration:none;">תחליפים
+            דיגיטליים</a> |
+        <a href="/replacements_behavior.html"
+            style="color:#8c7246;padding:0.31em 0.81em;text-decoration:none;">התנהגות/רגש</a> |
+        <a href="/cards_natural.html" style="color:#4e8e1a;padding:0.31em 0.8em;text-decoration:none;">קלפי טבעיים</a> |
+        <a href="/cards_digital.html" style="color:#1783b7;padding:0.31em 0.8em;text-decoration:none;">קלפי
+            דיגיטליים</a> |
+        <a href="/cards_behavior.html" style="color:#e7951a;padding:0.31em 0.8em;text-decoration:none;">קלפי
+            התנהגותיים</a>
+    </nav>
+    <header>
+        <h1>קלפי תחליפים רפואיים / תרופתיים</h1>
+        <span>הכוח להיגמל מתחיל ביד שלך!</span>
+    </header>
+    <div class="container">
+        <div class="cards-grid">
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-background crystal-bg"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="pokemon-name">מדבקת ניקוטין</div>
+                                <div class="hp">✔︎</div>
+                            </div>
+                            <div class="pokemon-info">
+                                <div class="ability">
+                                    <h3>השפעה</h3>
+                                    <p>שחרור קבוע של ניקוטין לדם ומיתון הדחף.</p>
+                                </div>
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">💎</div>
+                                        <div class="attack-info">
+                                            <h4>יתרון</h4>
+                                            <div class="damage">יציבות יומית</div>
+                                        </div>
+                                    </div>
+                                    <div class="attack">
+                                        <div class="attack-cost">🧭</div>
+                                        <div class="attack-info">
+                                            <h4>שימוש</h4>
+                                            <div class="damage">הדבקה בוקרית</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer"><span class="rarity">MED • SUPPORT</span></div>
+                        </div>
+                        <div class="border-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-background rainbow-bg"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="pokemon-name">מסטיק/סוכריה ניקוטינית</div>
+                                <div class="hp">★</div>
+                            </div>
+                            <div class="pokemon-info">
+                                <div class="ability">
+                                    <h3>השפעה</h3>
+                                    <p>סיפוק מיידי לדחף, גירוי חיך ופה.</p>
+                                </div>
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">⚡</div>
+                                        <div class="attack-info">
+                                            <h4>יתרון</h4>
+                                            <div class="damage">שליטה גמישה</div>
+                                        </div>
+                                    </div>
+                                    <div class="attack">
+                                        <div class="attack-cost">📋</div>
+                                        <div class="attack-info">
+                                            <h4>שימוש</h4>
+                                            <div class="damage">לעיסה/מציצה</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer"><span class="rarity">MED • QUICK</span></div>
+                        </div>
+                        <div class="border-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-background crystal-bg"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="pokemon-name">משאף/תרסיס ניקוטין</div>
+                                <div class="hp">⚕︎</div>
+                            </div>
+                            <div class="pokemon-info">
+                                <div class="ability">
+                                    <h3>השפעה</h3>
+                                    <p>ניקוטין מהיר וזמין להפגת דחף פתאומי.</p>
+                                </div>
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">🚀</div>
+                                        <div class="attack-info">
+                                            <h4>יתרון</h4>
+                                            <div class="damage">תגובה מיידית</div>
+                                        </div>
+                                    </div>
+                                    <div class="attack">
+                                        <div class="attack-cost">🧴</div>
+                                        <div class="attack-info">
+                                            <h4>שימוש</h4>
+                                            <div class="damage">שאיפה/התזה</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer"><span class="rarity">MED • FAST</span></div>
+                        </div>
+                        <div class="border-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-background rainbow-bg"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="pokemon-name">תרופה במרשם</div>
+                                <div class="hp">Rx</div>
+                            </div>
+                            <div class="pokemon-info">
+                                <div class="ability">
+                                    <h3>השפעה</h3>
+                                    <p>הפחתה הדרגתית של רצון ופיתוי לעשן.</p>
+                                </div>
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">🧠</div>
+                                        <div class="attack-info">
+                                            <h4>יתרון</h4>
+                                            <div class="damage">תמיכה פסיכולוגית</div>
+                                        </div>
+                                    </div>
+                                    <div class="attack">
+                                        <div class="attack-cost">📆</div>
+                                        <div class="attack-info">
+                                            <h4>שימוש</h4>
+                                            <div class="damage">בהנחיית רופא</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer"><span class="rarity">MED • RX</span></div>
+                        </div>
+                        <div class="border-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var KEY = 'cardsAnimationsEnabled';
+            var enabled = localStorage.getItem(KEY);
+            // ברירת מחדל: כבוי (no-animations)
+            var body = document.body;
+            var toggle = document.getElementById('animToggle');
+            function applyState(on) {
+                if (on) {
+                    body.classList.remove('no-animations');
+                    toggle.setAttribute('aria-checked', 'true');
+                    toggle.setAttribute('aria-pressed', 'true');
+                    toggle.textContent = 'אנימציות: פועל';
+                } else {
+                    body.classList.add('no-animations');
+                    toggle.setAttribute('aria-checked', 'false');
+                    toggle.setAttribute('aria-pressed', 'false');
+                    toggle.textContent = 'אנימציות: כבוי';
+                }
+            }
+            var startOn = (enabled === 'true') ? true : false; // אם אין מפתח, נשאר false = כבוי
+            applyState(startOn);
+            toggle.addEventListener('click', function () {
+                startOn = !startOn; applyState(startOn); localStorage.setItem(KEY, String(startOn));
+            });
+        })();
+    </script>
+</body>
+
+</html>

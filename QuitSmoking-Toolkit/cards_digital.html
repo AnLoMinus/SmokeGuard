@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>קלפי תחליפים דיגיטליים</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {font-family:'Heebo',Arial,sans-serif; background:#f8fcff; margin:0;}
+    header {background:linear-gradient(90deg,#b3e1ff 0%,#ecf4ff 90%);color:#125583;text-align:center;padding:1.3rem 0 1.1rem 0;}
+    main {max-width:1000px; margin:2rem auto; display:grid; gap:2.1rem;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));}
+    .card {background:linear-gradient(135deg,#ebf4fb 65%,#d3eefd 100%);border-radius:22px; box-shadow:0 2px 24px #85caf424; padding:1.06rem 1.13rem 1.07rem 1.12rem; display:flex; flex-direction:column; align-items:center; border:2px solid #b4d8e4; min-width:230px; min-height:320px;}
+    .icon {font-size:3.1rem;margin-bottom:0.35em;}
+    h2 {margin:0 0 .22em 0; font-size:1.22em;color:#2887bc; letter-spacing:1.1px;}
+    .desc {font-size:1.01em; color:#253940; margin-bottom:0.5em;min-height:46px;}
+    .adv {color:#274877; margin-bottom:0.2em; font-weight:600;}
+    .how{color:#557c99;font-size:0.93em;}
+    @media (max-width:600px){main{grid-template-columns:1fr;}}
+  </style>
+  <link rel="stylesheet" href="AnLoMinus-Cards/styles.css">
+  <style>
+    .no-animations * { animation: none !important; transition: none !important; }
+    .no-animations .sparkle-layer, .no-animations .border-glow { display: none !important; }
+    .no-animations .card:hover { transform: none !important; }
+    .toolbar { background:#f4f7fb; border-bottom:1px solid #dbe3ef; padding:10px 12px; display:flex; justify-content:center; gap:12px; align-items:center; }
+    .toggle-btn { appearance:none; border:1px solid #9db6cf; background:#e9f1fa; color:#194b6d; padding:8px 12px; border-radius:999px; cursor:pointer; font: inherit; }
+    .toggle-btn[aria-pressed="true"] { background:#194b6d; color:#fff; border-color:#194b6d; }
+  </style>
+</head>
+<body>
+<div class="toolbar" role="toolbar" aria-label="הגדרות תצוגה">
+  <button id="animToggle" class="toggle-btn" type="button" role="switch" aria-checked="false" aria-pressed="false">אנימציות: כבוי</button>
+</div>
+<nav style="background:#e3fff0;padding:1rem 0 1rem 0;text-align:center;font-size:1.07em;margin-bottom:15px;border-bottom:1.5px solid #90c3be13;">
+<strong>ניווט מהיר:</strong>&nbsp;
+<a href="/index.html" style="color:#125583;padding:0.31em 0.81em;text-decoration:none;">עמוד ראשי</a> |
+<a href="/replacements_meds.html" style="color:#046f8a;padding:0.31em 0.81em;text-decoration:none;">תחליפים רפואיים</a> |
+<a href="/replacements_natural.html" style="color:#4e8e1a;padding:0.31em 0.81em;text-decoration:none;">תחליפים טבעיים</a> |
+<a href="/replacements_digital.html" style="color:#2887bc;padding:0.31em 0.81em;text-decoration:none;">תחליפים דיגיטליים</a> |
+<a href="/replacements_behavior.html" style="color:#995c2e;padding:0.31em 0.81em;text-decoration:none;">התנהגות/רגש</a> |
+<a href="/cards_meds.html" style="color:#046f8a;padding:0.31em 0.8em;text-decoration:none;">קלפי רפואיים</a> |
+<a href="/cards_natural.html" style="color:#4e8e1a;padding:0.31em 0.8em;text-decoration:none;">קלפי טבעיים</a> |
+<a href="/cards_behavior.html" style="color:#e7951a;padding:0.31em 0.8em;text-decoration:none;">קלפי התנהגותיים</a>
+</nav>
+<header>
+  <h1>קלפי תחליפים דיגיטליים/טכנולוגיים</h1>
+  <span>כל הכלים שהעולם הדיגיטלי נותן לך לגמילה</span>
+</header>
+<div class="container">
+  <div class="cards-grid">
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-background crystal-bg"></div>
+          <div class="holographic-layer"></div>
+          <div class="sparkle-layer"><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div></div>
+          <div class="card-content">
+            <div class="card-header"><div class="pokemon-name">אפליקציית גמילה</div><div class="hp">📱</div></div>
+            <div class="pokemon-info">
+              <div class="ability"><h3>השפעה</h3><p>מעקב, גרפים, מוטיבציה וחסכון כספי.</p></div>
+              <div class="attacks">
+                <div class="attack"><div class="attack-cost">🔔</div><div class="attack-info"><h4>יתרון</h4><div class="damage">תזכורות יומיות</div></div></div>
+                <div class="attack"><div class="attack-cost">🎯</div><div class="attack-info"><h4>שימוש</h4><div class="damage">יעדים ומדדים</div></div></div>
+              </div>
+            </div>
+            <div class="card-footer"><span class="rarity">DIGI • TRACK</span></div>
+          </div>
+          <div class="border-glow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-background rainbow-bg"></div>
+          <div class="holographic-layer"></div>
+          <div class="sparkle-layer"><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div></div>
+          <div class="card-content">
+            <div class="card-header"><div class="pokemon-name">בוט תמיכה</div><div class="hp">🤖</div></div>
+            <div class="pokemon-info">
+              <div class="ability"><h3>השפעה</h3><p>עידוד אישי וטיפים בזמן אמת.</p></div>
+              <div class="attacks">
+                <div class="attack"><div class="attack-cost">⚙️</div><div class="attack-info"><h4>יתרון</h4><div class="damage">24/7</div></div></div>
+                <div class="attack"><div class="attack-cost">📲</div><div class="attack-info"><h4>שימוש</h4><div class="damage">הצטרפות בלינק</div></div></div>
+              </div>
+            </div>
+            <div class="card-footer"><span class="rarity">DIGI • BOT</span></div>
+          </div>
+          <div class="border-glow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-background crystal-bg"></div>
+          <div class="holographic-layer"></div>
+          <div class="sparkle-layer"><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div></div>
+          <div class="card-content">
+            <div class="card-header"><div class="pokemon-name">פורומים ואתרים</div><div class="hp">💬</div></div>
+            <div class="pokemon-info">
+              <div class="ability"><h3>השפעה</h3><p>קהילה, שיתוף, תשובות וחוכמת ההמון.</p></div>
+              <div class="attacks">
+                <div class="attack"><div class="attack-cost">🌐</div><div class="attack-info"><h4>יתרון</h4><div class="damage">נגיש מכל מקום</div></div></div>
+                <div class="attack"><div class="attack-cost">📝</div><div class="attack-info"><h4>שימוש</h4><div class="damage">משתתפים בדיונים</div></div></div>
+              </div>
+            </div>
+            <div class="card-footer"><span class="rarity">DIGI • COMMUNITY</span></div>
+          </div>
+          <div class="border-glow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-background rainbow-bg"></div>
+          <div class="holographic-layer"></div>
+          <div class="sparkle-layer"><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div></div>
+          <div class="card-content">
+            <div class="card-header"><div class="pokemon-name">VAPE ללא ניקוטין</div><div class="hp">🚭</div></div>
+            <div class="pokemon-info">
+              <div class="ability"><h3>השפעה</h3><p>תחושת החזקת סיגריה ללא ניקוטין.</p></div>
+              <div class="attacks">
+                <div class="attack"><div class="attack-cost">🖐️</div><div class="attack-info"><h4>יתרון</h4><div class="damage">מרגיע ידיים</div></div></div>
+                <div class="attack"><div class="attack-cost">💧</div><div class="attack-info"><h4>שימוש</h4><div class="damage">נוזל ללא ניקוטין</div></div></div>
+              </div>
+            </div>
+            <div class="card-footer"><span class="rarity">DIGI • DEVICE</span></div>
+          </div>
+          <div class="border-glow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='cardsAnimationsEnabled';
+  var body=document.body; var toggle=document.getElementById('animToggle');
+  function apply(on){
+    if(on){ body.classList.remove('no-animations'); toggle.setAttribute('aria-checked','true'); toggle.setAttribute('aria-pressed','true'); toggle.textContent='אנימציות: פועל'; }
+    else { body.classList.add('no-animations'); toggle.setAttribute('aria-checked','false'); toggle.setAttribute('aria-pressed','false'); toggle.textContent='אנימציות: כבוי'; }
+  }
+  var saved=localStorage.getItem(KEY);
+  var on = (saved==='true') ? true : false; // ברירת מחדל כבוי
+  apply(on);
+  toggle.addEventListener('click',function(){ on=!on; apply(on); localStorage.setItem(KEY,String(on)); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>קלפי תחליפים טבעיים</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Heebo', Arial, sans-serif;
+            background: #fdfff7;
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(90deg, #abeb90 20%, #e5ffc3 98%);
+            color: #235619;
+            text-align: center;
+            padding: 1.45rem 0 1.25rem 0;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            display: grid;
+            gap: 2.1rem;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        }
+
+        .card {
+            background: linear-gradient(140deg, #f8ffe2 60%, #deffd9 100%);
+            border-radius: 22px;
+            box-shadow: 0 2px 20px #a6e03e14;
+            padding: 1.05rem 1.1rem 1rem 1.1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #b9ecad;
+            min-width: 230px;
+            min-height: 340px;
+        }
+
+        .icon {
+            font-size: 3.1rem;
+            margin-bottom: 0.35em;
+        }
+
+        h2 {
+            margin: 0 0 .22em 0;
+            font-size: 1.27em;
+            color: #378152;
+            letter-spacing: 1.3px;
+        }
+
+        .desc {
+            font-size: 1.00em;
+            color: #436622;
+            margin-bottom: 0.6em;
+            min-height: 48px;
+        }
+
+        .adv {
+            color: #7d3250;
+            margin-bottom: 0.2em;
+            font-weight: 700;
+        }
+
+        .how {
+            color: #597117;
+            font-size: 0.94em;
+        }
+
+        @media (max-width:600px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="AnLoMinus-Cards/styles.css">
+    <style>
+        .no-animations * {
+            animation: none !important;
+            transition: none !important;
+        }
+
+        .no-animations .sparkle-layer,
+        .no-animations .border-glow {
+            display: none !important;
+        }
+
+        .no-animations .card:hover {
+            transform: none !important;
+        }
+
+        .toolbar {
+            background: #f4f7fb;
+            border-bottom: 1px solid #dbe3ef;
+            padding: 10px 12px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .toggle-btn {
+            appearance: none;
+            border: 1px solid #9db6cf;
+            background: #e9f1fa;
+            color: #194b6d;
+            padding: 8px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            font: inherit;
+        }
+
+        .toggle-btn[aria-pressed="true"] {
+            background: #194b6d;
+            color: #fff;
+            border-color: #194b6d;
+        }
+    </style>
+</head>
+
+<body>
+    <nav
+        style="background:#e3fff0;padding:1rem 0 1rem 0;text-align:center;font-size:1.05em;margin-bottom:15px;border-bottom:1.5px solid #a2d63312;">
+        <strong>ניווט מהיר:</strong>&nbsp;
+        <a href="/index.html" style="color:#235619;padding:0.31em 0.81em;text-decoration:none;">עמוד ראשי</a> |
+        <a href="/replacements_meds.html" style="color:#227091;padding:0.31em 0.81em;text-decoration:none;">תחליפים
+            רפואיים</a> |
+        <a href="/replacements_natural.html" style="color:#378152;padding:0.31em 0.81em;text-decoration:none;">תחליפים
+            טבעיים</a> |
+        <a href="/replacements_digital.html" style="color:#206496;padding:0.31em 0.81em;text-decoration:none;">תחליפים
+            דיגיטליים</a> |
+        <a href="/replacements_behavior.html"
+            style="color:#815f20;padding:0.31em 0.81em;text-decoration:none;">התנהגות/רגש</a> |
+        <a href="/cards_meds.html" style="color:#046f8a;padding:0.31em 0.8em;text-decoration:none;">קלפי רפואיים</a> |
+        <a href="/cards_digital.html" style="color:#1783b7;padding:0.31em 0.8em;text-decoration:none;">קלפי
+            דיגיטליים</a> |
+        <a href="/cards_behavior.html" style="color:#e7951a;padding:0.31em 0.8em;text-decoration:none;">קלפי
+            התנהגותיים</a>
+    </nav>
+    <div class="toolbar" role="toolbar" aria-label="הגדרות תצוגה">
+        <button id="animToggle" class="toggle-btn" type="button" role="switch" aria-checked="false"
+            aria-pressed="false">אנימציות: כבוי</button>
+    </div>
+    <header>
+        <h1>קלפי תחליפים טבעיים/צמחיים</h1>
+        <span>כוח הגמילה חי סביבך — פשוט בטבע!</span>
+    </header>
+    <div class="container">
+        <div class="cards-grid">
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-background crystal-bg"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="pokemon-name">גרעיני חמנייה/אגוזים</div>
+                                <div class="hp">🥜</div>
+                            </div>
+                            <div class="pokemon-info">
+                                <div class="ability">
+                                    <h3>השפעה</h3>
+                                    <p>הסחת הדעת וגירוי אוראלי קל.</p>
+                                </div>
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">🪙</div>
+                                        <div class="attack-info">
+                                            <h4>יתרון</h4>
+                                            <div class="damage">נגיש וזול</div>
+                                        </div>
+                                    </div>
+                                    <div class="attack">
+                                        <div class="attack-cost">👜</div>
+                                        <div class="attack-info">
+                                            <h4>שימוש</h4>
+                                            <div class="damage">נשיאה יומיומית</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer"><span class="rarity">NATURAL • CRUNCH</span></div>
+                        </div>
+                        <div class="border-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-background rainbow-bg"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="pokemon-name">ירקות/פירות קשים</div>
+                                <div class="hp">🥕</div>
+                            </div>
+                            <div class="pokemon-info">
+                                <div class="ability">
+                                    <h3>השפעה</h3>
+                                    <p>נשנוש משביע ובריא, גירוי תחושתי בפה.</p>
+                                </div>
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">🍏</div>
+                                        <div class="attack-info">
+                                            <h4>יתרון</h4>
+                                            <div class="damage">בריאותי</div>
+                                        </div>
+                                    </div>
+                                    <div class="attack">
+                                        <div class="attack-cost">🧺</div>
+                                        <div class="attack-info">
+                                            <h4>שימוש</h4>
+                                            <div class="damage">חתוך ומוכן</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer"><span class="rarity">NATURAL • FRESH</span></div>
+                        </div>
+                        <div class="border-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-background crystal-bg"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="pokemon-name">תה צמחים/קוביות קרח</div>
+                                <div class="hp">🍵</div>
+                            </div>
+                            <div class="pokemon-info">
+                                <div class="ability">
+                                    <h3>השפעה</h3>
+                                    <p>הרגעה והסחת הדעת בדקות ספורות.</p>
+                                </div>
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">❄️</div>
+                                        <div class="attack-info">
+                                            <h4>יתרון</h4>
+                                            <div class="damage">דַל קלוריות</div>
+                                        </div>
+                                    </div>
+                                    <div class="attack">
+                                        <div class="attack-cost">☕</div>
+                                        <div class="attack-info">
+                                            <h4>שימוש</h4>
+                                            <div class="damage">לגימות איטיות</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer"><span class="rarity">NATURAL • CALM</span></div>
+                        </div>
+                        <div class="border-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-background rainbow-bg"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="pokemon-name">קיסמים בטעמים</div>
+                                <div class="hp">🥢</div>
+                            </div>
+                            <div class="pokemon-info">
+                                <div class="ability">
+                                    <h3>השפעה</h3>
+                                    <p>רעננות וגירוי אוראלי לא ממכר.</p>
+                                </div>
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">🌿</div>
+                                        <div class="attack-info">
+                                            <h4>יתרון</h4>
+                                            <div class="damage">זמין בכיס</div>
+                                        </div>
+                                    </div>
+                                    <div class="attack">
+                                        <div class="attack-cost">📦</div>
+                                        <div class="attack-info">
+                                            <h4>שימוש</h4>
+                                            <div class="damage">למצוץ עדין</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer"><span class="rarity">NATURAL • MINT</span></div>
+                        </div>
+                        <div class="border-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-background crystal-bg"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="pokemon-name">מסטיק טבעי ללא סוכר</div>
+                                <div class="hp">🍬</div>
+                            </div>
+                            <div class="pokemon-info">
+                                <div class="ability">
+                                    <h3>השפעה</h3>
+                                    <p>רענון יומי, תעסוקה עדינה לפה.</p>
+                                </div>
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">✨</div>
+                                        <div class="attack-info">
+                                            <h4>יתרון</h4>
+                                            <div class="damage">ריח פה נעים</div>
+                                        </div>
+                                    </div>
+                                    <div class="attack">
+                                        <div class="attack-cost">🗓️</div>
+                                        <div class="attack-info">
+                                            <h4>שימוש</h4>
+                                            <div class="damage">1–2 ביום</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer"><span class="rarity">NATURAL • FRESHMINT</span></div>
+                        </div>
+                        <div class="border-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var KEY = 'cardsAnimationsEnabled';
+            var body = document.body; var toggle = document.getElementById('animToggle');
+            function apply(on) {
+                if (on) { body.classList.remove('no-animations'); toggle.setAttribute('aria-checked', 'true'); toggle.setAttribute('aria-pressed', 'true'); toggle.textContent = 'אנימציות: פועל'; }
+                else { body.classList.add('no-animations'); toggle.setAttribute('aria-checked', 'false'); toggle.setAttribute('aria-pressed', 'false'); toggle.textContent = 'אנימציות: כבוי'; }
+            }
+            var saved = localStorage.getItem(KEY);
+            var on = (saved === 'true') ? true : false; // ברירת מחדל כבוי
+            apply(on);
+            toggle.addEventListener('click', function () { on = !on; apply(on); localStorage.setItem(KEY, String(on)); });
+        })();
+    </script>
+</body>
+
+</html>
